@@ -1,4 +1,4 @@
 interface:
   display_name: "MATLAB Simulink Agent"
-  short_description: "Build and run MATLAB Simulink simulations"
-  default_prompt: "Use $matlab-simulink-agent to create and validate a Simulink model for a control or power-system simulation."
+  short_description: "Doc-driven MATLAB Simulink automation"
+  default_prompt: "Use $matlab-simulink-agent to retrieve MATLAB documentation, generate automation scripts, and validate a Simulink simulation."

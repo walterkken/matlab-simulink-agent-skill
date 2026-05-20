@@ -1,13 +1,16 @@
 # MATLAB Simulink Agent Skill
 
-This repository contains a Codex skill for MATLAB/Simulink simulation work.
+This repository contains a Codex skill for doc-driven MATLAB/Simulink automation.
 
 The skill focuses on:
 
 - reading MATLAB/Simulink help selectively for the current task
+- scanning the installed MATLAB release, products, help indexes, and Simulink availability
+- inventorying Simulink libraries and block parameters before generating models
 - checking local MATLAB products and licenses
 - generating Simulink models with MATLAB scripts
 - running simulations in batch mode
+- repairing generated scripts from MATLAB diagnostics
 - exporting logs, plots, and validation data
 - supporting power-system and transient-stability workflows
 
@@ -45,6 +48,15 @@ Run a MATLAB script:
 
 ```bash
 ./matlab-simulink-agent/scripts/run_matlab_batch.sh path/to/script.m
+```
+
+Create a capability report:
+
+```matlab
+addpath('matlab-simulink-agent/scripts')
+matlab_capability_scan('matlab-capabilities.json')
+matlab_doc_lookup('programmatic model editing', 'doc-programmatic-model-editing.txt')
+simulink_inventory('simulink-inventory.json', "simulink", 4)
 ```
 
 ## Example

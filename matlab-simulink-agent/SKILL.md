@@ -22,13 +22,15 @@ Do not ingest, copy, or redistribute entire MathWorks documentation sets. Read l
 5. **Generate reproducible automation**: create `.m` scripts that call documented APIs such as `new_system`, `load_system`, `add_block`, `set_param`, `add_line`, `find_system`, `save_system`, and `sim`. Put generated models and outputs under an explicit project folder.
 6. **Run, inspect, repair**: execute with `scripts/run_matlab_batch.sh`, read diagnostics, retrieve missing docs/metadata, patch the script, and rerun until success or a real blocker is identified.
 7. **Guide blocker resolution**: when a real blocker appears, use `references/blocker-remediation.md` to classify it and give the user concrete, legitimate steps to remove the restriction.
-8. **Validate and report**: export plots/data/logs, verify solver settings, dimensions, units, initial conditions, logged outputs, and pass/fail criteria. List concrete artifacts and residual assumptions.
+8. **Search trusted community fixes when needed**: if official docs and local metadata are insufficient, use `references/community-troubleshooting.md` to search vendor forums and technical communities with exact errors, versions, and product names.
+9. **Validate and report**: export plots/data/logs, verify solver settings, dimensions, units, initial conditions, logged outputs, and pass/fail criteria. List concrete artifacts and residual assumptions.
 
 ## Resources
 
 - `references/doc-access.md`: how to find and read MATLAB/Simulink help without copying full docs.
 - `references/doc-driven-automation.md`: retrieval-action loop for automating anything documented and available in the installed MATLAB environment.
 - `references/blocker-remediation.md`: how to diagnose and guide users through legitimate fixes for permissions, licenses, missing toolboxes, startup issues, UI-only tasks, and hardware constraints.
+- `references/community-troubleshooting.md`: how to search MathWorks and technical forums safely when official docs do not resolve an error.
 - `references/simulink-build-patterns.md`: repeatable patterns for creating, inspecting, simulating, and exporting Simulink models.
 - `references/power-systems.md`: Simulink/Simscape Electrical guidance for power-system and transient-stability simulations.
 - `scripts/check_matlab_env.sh`: locate MATLAB and optionally list installed products.

@@ -12,6 +12,7 @@ The skill focuses on:
 - running simulations in batch mode
 - repairing generated scripts from MATLAB diagnostics
 - guiding users through legitimate fixes for permissions, licenses, missing toolboxes, startup failures, UI-only workflows, and hardware constraints
+- searching trusted vendor/community forums when official docs and local metadata do not resolve an error
 - exporting logs, plots, and validation data
 - supporting power-system and transient-stability workflows
 

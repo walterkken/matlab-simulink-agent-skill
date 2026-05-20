@@ -11,6 +11,7 @@ The skill focuses on:
 - generating Simulink models with MATLAB scripts
 - running simulations in batch mode
 - repairing generated scripts from MATLAB diagnostics
+- guiding users through legitimate fixes for permissions, licenses, missing toolboxes, startup failures, UI-only workflows, and hardware constraints
 - exporting logs, plots, and validation data
 - supporting power-system and transient-stability workflows
 

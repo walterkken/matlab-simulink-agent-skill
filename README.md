@@ -1,6 +1,8 @@
 # MATLAB Simulink Agent Skill
 
-This repository contains a Codex skill for doc-driven MATLAB/Simulink automation.
+Doc-driven MATLAB and Simulink automation skill for AI agents.
+
+The goal is simple: when MATLAB/Simulink documentation, installed products, and licenses expose an API or workflow, the agent should retrieve the relevant local knowledge, generate a reproducible script, run it, inspect errors, repair the script, and export evidence.
 
 The skill focuses on:
 
@@ -15,6 +17,20 @@ The skill focuses on:
 - searching trusted vendor/community forums when official docs and local metadata do not resolve an error
 - exporting logs, plots, and validation data
 - supporting power-system and transient-stability workflows
+
+## Quick Example
+
+```text
+User: Build a minimal Simulink model that applies a gain to a step signal and exports the result.
+Agent:
+1. checks MATLAB path
+2. scans Simulink availability
+3. creates a model with Step -> Gain -> To Workspace
+4. runs sim()
+5. exports CSV, PNG, MAT, and SLX artifacts
+```
+
+See [`examples/minimal-model-workflow.md`](examples/minimal-model-workflow.md).
 
 ## Install locally
 
@@ -71,3 +87,8 @@ create_minimal_simulink_model('generated-minimal-model')
 ```
 
 Or from batch mode, create a small wrapper `.m` file that calls `create_minimal_simulink_model`.
+
+## Related Repositories
+
+- Popular process skills: https://github.com/walterkken/popular-process-skills
+- Engineering operator / `马斯克`: https://github.com/walterkken/engineering-operator-agents
